@@ -17,8 +17,7 @@ tags:
 - 서브모듈로 연결할 repository 주소
 - 메인 Repository
 
-> 예) jekyll 블로그(username.github.io) repository의 `_posts` 디렉토리에 .md 파일을 보관중인 repository를 서브모듈로 연결
-> [Reference 1](https://minyeamer.github.io/blog/hugo-blog-1/#%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%97%B0%EB%8F%99)
+> 예) jekyll 블로그(username.github.io) repository의 `_posts` 디렉토리에 .md 파일을 보관중인 repository를 서브모듈로 연결: [1]
 
 - 연결할 디렉토리(예: `_posts`) 백업 후 남아있는 캐시를 날려준다.
 
@@ -36,7 +35,7 @@ rm '_posts/2024-02-03.md'
 rm '_posts/test.md'
 ```
 
--   `_posts` 디렉토리 하위 파일 제거 [Reference 2]:(https://djoepramono.github.io/git-filter-branch/)
+-   `_posts` 디렉토리 하위 파일 제거: [2]
 
 ```bash
 $ git rm _posts/*
@@ -73,5 +72,10 @@ $ git submodule update --remote
 3. rm -rf .git/modules/{submodule}
 4. rm -rf 
 
-[Reference 3](https://blog.naver.com/jegumhon/220537092950)
-[Reference 4](http://snowdeer.github.io/git/2018/08/01/how-to-remove-git-submodule/)
+
+References:
+- [1] https://minyeamer.github.io/blog/hugo-blog-1/#%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%97%B0%EB%8F%99
+- [2] https://djoepramono.github.io/git-filter-branch/
+- [3] https://blog.naver.com/jegumhon/220537092950
+- [4] https://snowdeer.github.io/git/2018/08/01/how-to-remove-git-submodule
+
