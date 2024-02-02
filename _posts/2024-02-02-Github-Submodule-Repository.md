@@ -69,4 +69,4 @@ $ git submodule update --remote
 4. rm -rf 
 
 [Reference 3](https://blog.naver.com/jegumhon/220537092950)
-[Reference 4](http://snowdeer.github.io/git/2018/08/01/how-to-remove-git-submodule/)
+[Reference 4](https://snowdeer.github.io/git/2018/08/01/how-to-remove-git-submodule/)
