@@ -2,11 +2,8 @@
 share: true
 title: Github Submodule Repository
 date: 2024-02-02
-categories:
-  - Other
-tags:
-  - git
-  - blog
+categories: [Other]
+tags: [git, blog]
 ---
 
 

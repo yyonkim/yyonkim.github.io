@@ -4,11 +4,8 @@ pin: true
 author: yonkim
 title: How to Troubleshoot SSH Connectivity Issues
 date: 2024-02-03
-categories:
-  - Troubleshooting
-tags:
-  - ssh
-  - manual
+categories: [Troubleshooting]
+tags: [ssh, manual]
 ---
 
 
