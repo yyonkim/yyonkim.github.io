@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# update submodules (study-logs repos)
 git add .
-
 
 # Commit changes.
 
