@@ -80,16 +80,16 @@ DNS Resolver의 "Uplink Mode"와 "Stub Mode"는 Resolver가 DNS 쿼리를 처리
 업링크 서버는 특정 도메인에 대한 쿼리를 해결하기 위해 상위 계층의 DNS 서버에 다시 쿼리를 보내는 역할을 한다.
 로컬에서 받은 응답은 Resolver에 의해 캐시되어 다음에 동일한 쿼리가 있을 때 빠른 응답을 가능하게 한다.
 
-    - 사용자가 "www.example.com"에 대한 DNS 쿼리를 하면 로컬 DNS Resolver가 이를 받는다.
-    - Uplink 모드에서는 Resolver가 "www.example.com"에 대한 DNS 정보를 상위 레벨 DNS 서버로 전달한다.
-    - 상위 DNS 서버는 "www.example.com"의 IP 주소를 알려주고, 이 응답은 로컬 DNS Resolver에 캐시된다.
+- 사용자가 "www.example.com"에 대한 DNS 쿼리를 하면 로컬 DNS Resolver가 이를 받는다.
+- Uplink 모드에서는 Resolver가 "www.example.com"에 대한 DNS 정보를 상위 레벨 DNS 서버로 전달한다.
+- 상위 DNS 서버는 "www.example.com"의 IP 주소를 알려주고, 이 응답은 로컬 DNS Resolver에 캐시된다.
 
 **Stub Mode:**
 기본적으로 /etc/resolv.conf는 로컬 호스트 스텁(Stub) 리졸버를 가리킨다. systemd-resolved에서 `DNSStubListener=yes`가 기본값인 것이 이에 해당하며, 이는 로컬에서 DNS 쿼리를 수신하는 역할을 한다. Stub 리졸버는 업링크 모드와 달리 상위 계층의 DNS 서버에 쿼리를 직접 보내지 않고 지정한 DNS 서버로 바로 쿼리를 보낸다. 즉, Stub 모드에서는 로컬에서 DNS 쿼리를 처리하며, 이를 특정 외부 DNS 서버로 바로 전달한다. 이를 변경하려면 다른 내용으로 파일을 다시 만들거나 로컬 호스트 스텁 리졸버가 아닌 다른 곳을 가리키도록 해야한다. 
 
-    - 사용자가 "www.example.com"에 대한 DNS 쿼리를 하면 로컬 DNS Resolver가 이를 받는다.
-    - Stub 모드에서는 Resolver가 "www.example.com"에 대한 DNS 정보를 사용자가 지정한 외부 DNS 서버(예: 8.8.8.8)로 전달한다.
-    - 외부 DNS 서버(스텁 서버)는 "www.example.com"의 IP 주소를 알려주고, 이 응답은 로컬 DNS Resolver에 캐시된다.
+- 사용자가 "www.example.com"에 대한 DNS 쿼리를 하면 로컬 DNS Resolver가 이를 받는다.
+- Stub 모드에서는 Resolver가 "www.example.com"에 대한 DNS 정보를 사용자가 지정한 외부 DNS 서버(예: 8.8.8.8)로 전달한다.
+- 외부 DNS 서버(스텁 서버)는 "www.example.com"의 IP 주소를 알려주고, 이 응답은 로컬 DNS Resolver에 캐시된다.
 
 
 즉, Uplink Mode에서는 상위 DNS 서버로의 전달이 주요한 역할이며, Stub Mode에서는 특정 외부 DNS 서버로의 전달이 주요한 역할이다.
@@ -168,6 +168,6 @@ systemd-resolve --status
 
 
 References:
-[1] https://www.nslookup.io/learning/what-is-a-dns-resolver/
-[2] https://netplan.readthedocs.io/en/stable/netplan-status/
-[3] https://repost.aws/knowledge-center/ec2-static-dns-ubuntu-debian
+- [1] https://www.nslookup.io/learning/what-is-a-dns-resolver/
+- [2] https://netplan.readthedocs.io/en/stable/netplan-status/
+- [3] https://repost.aws/knowledge-center/ec2-static-dns-ubuntu-debian
