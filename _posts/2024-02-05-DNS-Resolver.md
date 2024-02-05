@@ -1,5 +1,6 @@
 ---
 share: true
+pin: true
 title: DNS Resolver와 네임서버 설정 방법
 date: 2024-02-05
 tags:
