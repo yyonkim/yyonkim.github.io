@@ -80,4 +80,4 @@ DNS 캐싱은 두 가지 주요 유형이 있다.
 
 ---
 References
-[1] https://www.nslookup.io/learning/what-is-dns/
+- [1] https://www.nslookup.io/learning/what-is-dns/
