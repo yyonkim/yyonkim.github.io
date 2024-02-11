@@ -2,7 +2,7 @@
 
   # Yonkim's Study log
 
-  욘킴의 스터디로그
+  욘킴의 [스터디로그](https://yyonkim.github.io)
 
   Powered by Jekyll with Chirpy theme.
 
