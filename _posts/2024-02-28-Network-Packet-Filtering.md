@@ -1,10 +1,13 @@
 ---
-share: true # means published from Obisidian
-title: "Linux 네트워크 패킷 필터링 (Network Packet Filtering)" # add (test) if this is a test doc
-date : "2024-02-28" # publish date
-tags : [network] # tags 
-categories : [OS] # Category (Troubleshooting, OS, Language, Network, Kubernetes, Docker ...)
+share: true
+title: Linux 네트워크 패킷 필터링 (Network Packet Filtering)
+date: 2024-02-28
+tags:
+  - network
+categories:
+  - OS
 ---
+
 
 
 ## 네튿워크 패킷 필터링이 필요한 경우?
@@ -59,27 +62,33 @@ categories : [OS] # Category (Troubleshooting, OS, Language, Network, Kubernetes
 ~$ iptabls -L
 
 Chain INPUT (policy ACCEPT)
+
 target     prot opt source               destination         
 
 Chain FORWARD (policy ACCEPT)
+
 target     prot opt source               destination         
 
 Chain OUTPUT (policy ACCEPT)
+
 target     prot opt source               destination    
 
-
-~$ iptables -L -t nat
+➜ root@data-002:~$ iptables -L -t nat
 
 Chain PREROUTING (policy ACCEPT)
+
 target     prot opt source               destination         
 
 Chain INPUT (policy ACCEPT)
+
 target     prot opt source               destination         
 
 Chain OUTPUT (policy ACCEPT)
+
 target     prot opt source               destination         
 
 Chain POSTROUTING (policy ACCEPT)
+
 target     prot opt source               destination
 ```
 
@@ -102,13 +111,17 @@ target     prot opt source               destination
 ~$ iptables -L
 
 Chain INPUT (policy ACCEPT)
+
 target     prot opt source               destination         
+
 DROP       tcp  --  anywhere             anywhere             tcp dpt:3000 # new rule
 
 Chain FORWARD (policy ACCEPT)
+
 target     prot opt source               destination         
 
 Chain OUTPUT (policy ACCEPT)
+
 target     prot opt source               destination
 
 ```
@@ -132,16 +145,21 @@ curl: (7) Failed to connect to server1 port 3000 after 0 ms: Connection refused
 ~$ iptables -L -t nat
 
 Chain PREROUTING (policy ACCEPT)
+
 target     prot opt source               destination         
+
 REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:x11 redir ports 2001 # new rule
 
 Chain INPUT (policy ACCEPT)
+
 target     prot opt source               destination         
 
 Chain OUTPUT (policy ACCEPT)
+
 target     prot opt source               destination         
 
 Chain POSTROUTING (policy ACCEPT)
+
 target     prot opt source               destination
 ```
 
